@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.heading {
+  color: blue;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.container {
+  display: flex;
+  border-bottom: 3px solid blue;
+  width: 70vw;
+  margin: 20px auto;
+}
+
+.selectedItems-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.selectedItems-box .selectedItems {
+  height: 32px;
+  padding: 30px 10px;
+  margin: 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 70px;
+  background: rgb(210, 210, 210) !important;
+  padding: 15px 10px 15px 0;
+}
+
+.searchItems {
+  position: relative;
+}
+
+.searchItems .searchBar {
+  min-width: 130px;
+  border-radius: 36px;
+  height: 32px !important;
+  border: none;
+  outline: none;
+  margin-bottom: 4px;
+  height: 40px;
+  padding: 0 10px;
+}
+
+.searchItems .boxes {
+  position: absolute;
+  top: 40px;
+}
+
+.searchItems .boxes .filteredItems-box {
+  max-height: 261px;
+  overflow-y: scroll;
+  width: 432px;
+  box-shadow: 5px 5px 23px -8px rgba(0, 0, 0, 0.75);
+}
+
+.searchItems .boxes .filteredItems-box .filteredItems {
+  display: flex;
+  justify-content: start;
+  padding: 10px 20px;
+  align-items: center;
+  gap: 10px;
+}
+
+.searchItems .boxes .filteredItems-box .filteredItems:hover {
+  background: rgb(202, 202, 202);
+}
+
+.matched-text {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+
+/* Add the 'active' class styles */
+.searchItems.active .boxes {
+  display: block;
+}
+
+/* Hide the boxes by default */
+.boxes {
+  display: none;
+}
+
+
+/* Add this in your App.css or your styles file */
+
+.selectedItems.activeLastElement {
+  background-color: #3498db !important;
+  color: #ffffff; 
+  border: 2px solid #3498db; 
+
+}
